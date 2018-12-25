@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc ",
     "prestart": "npm run build",
-    "start": "nodemon -V ./build/server"
+    "start": "node  ./build/server",
+    "start-watch": "Set DEBUG=* npm run prestart & nodemon  ./build/server",
+    "dev-server": "ts-node server.ts"
   },
   "keywords": [
     "express",
